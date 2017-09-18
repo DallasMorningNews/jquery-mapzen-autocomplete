@@ -1,0 +1,26 @@
+{
+  "name": "jquery-mapzen-autocomplete",
+  "version": "0.1.0",
+  "description": "Turns an HTML input into an address autocomplete widget using Mapzen's API",
+  "main": "jquery-mapzen-autocomplete.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DallasMorningNews/jquery-mapzen-autocomplete.git"
+  },
+  "keywords": [
+    "jquery"
+  ],
+  "author": "Andrew Chavez <adchavez@gmail.com> (https://achavez.io/)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/DallasMorningNews/jquery-mapzen-autocomplete/issues"
+  },
+  "homepage": "https://github.com/DallasMorningNews/jquery-mapzen-autocomplete#readme",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "lodash.throttle": "^4.1.1"
+  }
+}
