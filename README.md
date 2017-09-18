@@ -62,8 +62,9 @@ You'll need to install this into a project that has tooling to transpile the ES2
 
     // Fires when an address has been selected; returns a single
     // GeoJSON feature with a point that is the result
-    $('#address').on('mapzen:selected', (evt, results) => {
+    $('#address').on('mapzen:selected', (evt, results, accuracy) => {
       console.log(results);
+      console.log(accuracy); // set if location was obtained from user's device location; in feet
     });
 
     // Fired every time API querying begins

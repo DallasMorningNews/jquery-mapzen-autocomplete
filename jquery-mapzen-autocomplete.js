@@ -60,8 +60,7 @@ const getDeviceLocation = (onSuccess) => {
   };
 
   navigator.geolocation.getCurrentPosition((position) => {
-    // $('#id_location_accuracy').val(Math.round(position.coords.accuracy * 3.28084));
-    onSuccess(position);
+    onSuccess(position, Math.round(position.coords.accuracy * 3.28084));
   }, console.error, geolocateOptions);
 };
 
@@ -119,14 +118,14 @@ $.fn.extend({
         $attachment.append($geolocating);
 
         // ... geolocate with the user's device ...
-        getDeviceLocation((position) => {
+        getDeviceLocation((position, accuracy) => {
           const lat = position.coords.latitude;
           const lng = position.coords.longitude;
 
           // ... then take that geolocation and turn it into an address with Mapzen's API.
           reverseGeocode(mapzenOpts, lat, lng, (results) => {
             this.val(results.features[0].properties.label);
-            this.trigger('mapzen:selected', [results.features[0]]);
+            this.trigger('mapzen:selected', [results.features[0], accuracy]);
 
             $wrapper.removeClass('autocomplete-searching');
 
@@ -159,7 +158,7 @@ $.fn.extend({
       const selected = latestResults.features[choiceNum];
 
       this.val(selected.properties.label);
-      this.trigger('mapzen:selected', [selected]);
+      this.trigger('mapzen:selected', [selected, null]);
     });
 
     // Pipe API errors over a 'mapzen:error' event

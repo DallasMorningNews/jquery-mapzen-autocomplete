@@ -1,6 +1,6 @@
 {
   "name": "jquery-mapzen-autocomplete",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Turns an HTML input into an address autocomplete widget using Mapzen's API",
   "main": "jquery-mapzen-autocomplete.js",
   "scripts": {
