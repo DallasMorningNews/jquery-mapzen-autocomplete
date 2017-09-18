@@ -1,4 +1,4 @@
-# `$.mapzenAutocomplete()`
+# `jquery-mapzen-autocomplete`
 
 This is a jQuery address autocomplete widget that uses Mapzen's [search API](https://mapzen.com/documentation/search/search/). It's ripped from the `voter-guide`'s home page.
 
@@ -38,7 +38,7 @@ You'll need to install this into a project that has tooling to transpile the ES2
 
     ```js
     import $ from 'jquery';
-    import './jquery-mapzen-autocomplete';
+    import 'jquery-mapzen-autocomplete';
 
     $('#address').mapzenAutocomplete({
       // Don't start geolocating until 5 characters have been entered (default)
