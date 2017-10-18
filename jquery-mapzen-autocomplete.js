@@ -170,7 +170,11 @@ $.fn.extend({
     // API - basically, wipe out the autocomplete drawer and re-draw it with
     // the API results
     const processResults = (results) => {
-      latestResults = results;
+      if (results.features.length === 0) {
+        results = latestResults;
+      } else {
+        latestResults = results;
+      }
 
       $results.html('');
 
