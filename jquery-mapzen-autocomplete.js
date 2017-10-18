@@ -227,5 +227,12 @@ $.fn.extend({
         this.trigger('mapzen:searching-started');
       }
     });
+
+    // When the user presses Enter in the <input>, select the first result
+    this.on('keyup', (evt) => {
+      if (evt.keyCode === 13) {
+        $results.find('li').first().click();
+      }
+    });
   },
 });
