@@ -229,8 +229,9 @@ $.fn.extend({
     });
 
     // When the user presses Enter in the <input>, select the first result
-    this.on('keyup', (evt) => {
+    this.on('keydown', (evt) => {
       if (evt.keyCode === 13) {
+        evt.preventDefault();
         $results.find('li').first().click();
       }
     });
