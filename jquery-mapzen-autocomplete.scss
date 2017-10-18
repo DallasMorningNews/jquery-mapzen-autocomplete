@@ -59,6 +59,8 @@
 .autocomplete-geolocate {
   padding-left: 4px;
 }
-.autocomplete-too-short {
+.autocomplete-too-short,
+.autocomplete-too-short:hover {
   font-style: italic;
+  background: white;
 }
