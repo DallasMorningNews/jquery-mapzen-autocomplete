@@ -68,6 +68,7 @@ const getDeviceLocation = (onSuccess) => {
 $.fn.extend({
   mapzenAutocomplete: function mapzenAutocomplete({ minCharacters = 5, mapzenOpts = {}, deviceLocation = true } = {}) {  // eslint-disable-line max-len
     this.addClass('autocomplete-input');
+    this.attr('autocomplete', 'off');
 
     // Wrap the <input> in a <div> that we can use to position our attachments (like the spinner)
     this.wrap($('<div class="autocomplete-wrapper"></div>'));
