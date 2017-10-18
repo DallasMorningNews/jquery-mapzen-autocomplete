@@ -68,7 +68,6 @@ const getDeviceLocation = (onSuccess) => {
 $.fn.extend({
   mapzenAutocomplete: function mapzenAutocomplete({ minCharacters = 5, mapzenOpts = {}, deviceLocation = true } = {}) {  // eslint-disable-line max-len
     this.addClass('autocomplete-input');
-    this.attr('autocomplete', 'off');
 
     // Wrap the <input> in a <div> that we can use to position our attachments (like the spinner)
     this.wrap($('<div class="autocomplete-wrapper"></div>'));
@@ -212,8 +211,13 @@ $.fn.extend({
     // In addition to the debounced handler, also add an unthrottled handler that fires
     // immediately to kick off UI events
     this.on('input', () => {
-      if (this.val().length === 0 || this.val().length < minCharacters) {
+      if (this.val().length === 0) {
         $results.html('');
+      } else if (this.val().length < minCharacters) {
+        $results.html(`
+          <li class="autocomplete-choice autocomplete-too-short">
+            Continue typing to search for an address
+          </li>`);
         return;
       }
 
