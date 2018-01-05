@@ -1,3 +1,5 @@
+**DEPRECATED: Mapzen is [no more](https://mapzen.com/blog/shutdown/), so we're no longer maintaining this plug-in. We may bring it back to life with a different geocoder someday (see [#2](https://github.com/DallasMorningNews/jquery-mapzen-autocomplete/issues/2)), but for now you should avoid this and seek another solution.**
+
 # `jquery-mapzen-autocomplete`
 
 This is a jQuery address autocomplete widget that uses Mapzen's [search API](https://mapzen.com/documentation/search/search/). It's ripped from the `voter-guide`'s home page.
