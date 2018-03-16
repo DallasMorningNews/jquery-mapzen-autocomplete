@@ -1,14 +1,14 @@
 {
-  "name": "jquery-mapzen-autocomplete",
-  "version": "0.1.2",
-  "description": "Turns an HTML input into an address autocomplete widget using Mapzen's API",
-  "main": "jquery-mapzen-autocomplete.js",
+  "name": "jquery-opencage-autocomplete",
+  "version": "0.2.0",
+  "description": "Turns an HTML input into an address autocomplete widget using OpenCage's geocoding API",
+  "main": "jquery-opencage-autocomplete.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DallasMorningNews/jquery-mapzen-autocomplete.git"
+    "url": "git+https://github.com/DallasMorningNews/jquery-opencage-autocomplete.git"
   },
   "keywords": [
     "jquery"
@@ -16,12 +16,21 @@
   "author": "Andrew Chavez <adchavez@gmail.com> (https://achavez.io/)",
   "license": "UNLICENSED",
   "browserify": {
-    "transform": [["babelify", { "presets": ["es2015"] }]]
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "env"
+          ]
+        }
+      ]
+    ]
   },
   "bugs": {
-    "url": "https://github.com/DallasMorningNews/jquery-mapzen-autocomplete/issues"
+    "url": "https://github.com/DallasMorningNews/jquery-opencage-autocomplete/issues"
   },
-  "homepage": "https://github.com/DallasMorningNews/jquery-mapzen-autocomplete#readme",
+  "homepage": "https://github.com/DallasMorningNews/jquery-opencage-autocomplete#readme",
   "dependencies": {
     "jquery": "^3.2.1",
     "lodash.throttle": "^4.1.1"
