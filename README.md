@@ -1,4 +1,6 @@
-## This plugin is no longer maintained (we're back to using the Google Maps API).
+**This plugin is no longer maintained (we're back to using the Google Maps autocomplete widget) as of July 2018.**
+
+---
 
 # `jquery-opencage-autocomplete`
 
