@@ -1,3 +1,5 @@
+## This plugin is no longer maintained (we're back to using the Google Maps API).
+
 # `jquery-opencage-autocomplete`
 
 This is a jQuery address autocomplete widget that uses OpenCage's [geocoding API](https://geocoder.opencagedata.com/api). It's ripped from the `voter-guide`'s home page.
